@@ -19,6 +19,7 @@ import joyousCouple from "../../assets/images/joyous-young-couple.png";
 import excuseGirl from "../../assets/images/girl-excuse.png";
 import luckyWomen from "../../assets/images/lucky-women.png";
 import happyWomen from "../../assets/images/two-happy-women.png";
+import chattingWithFriend from "../../assets/images/chat-with-friend.png";
 
 const BannerCarousel = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -60,13 +61,16 @@ const BannerCarousel = () => {
                 <SwiperSlide>
                     <img src={happyWomen} alt="" />
                 </SwiperSlide>
+                <SwiperSlide>
+                    <img src={chattingWithFriend} alt="" />
+                </SwiperSlide>
             </Swiper>
 
             {/* thumbs */}
             <Swiper
                 onSwiper={setThumbsSwiper}
                 spaceBetween={10}
-                slidesPerView={4}
+                slidesPerView={5}
                 freeMode={true}
                 watchSlidesProgress={true}
                 modules={[FreeMode, Navigation, Thumbs]}
@@ -83,6 +87,9 @@ const BannerCarousel = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={happyWomen} alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src={chattingWithFriend} alt="" />
                 </SwiperSlide>
             </Swiper>
         </div>
