@@ -93,7 +93,7 @@ const Navbar = () => {
             <div className="navbar-end">
                 <div className="flex flex-col text-center font-bold mr-5">
                     <a>Mohammad Tanim</a>
-                    <a>Points: 3509</a>
+                    <a>Points: <span className="text-primary">3509</span></a>
                 </div>
                 <div className="avatar">
                     <div className="w-16 rounded-full">
