@@ -59,7 +59,7 @@ const Navbar = () => {
                 <a>
                     <img width={64} src={stringarLogo} alt="" />
                 </a>
-                <a className="text-2xl font-bold">Stringar</a>
+                <a className="text-xl md:text-2xl font-bold">Stringar</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
