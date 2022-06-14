@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { EffectFade, Autoplay, Pagination, Navigation } from "swiper";
+import "swiper/css/free-mode";
+import "swiper/css/thumbs";
+import {
+    EffectFade,
+    Autoplay,
+    Pagination,
+    FreeMode,
+    Navigation,
+    Thumbs,
+} from "swiper";
 import "./BannerCarousel.css";
 import joyousCouple from "../../assets/images/joyous-young-couple.png";
-import excuseGirl from '../../assets/images/girl-excuse.png';
-import luckyWomen from '../../assets/images/lucky-women.png';
-import happyWomen from '../../assets/images/two-happy-women.png';
+import excuseGirl from "../../assets/images/girl-excuse.png";
+import luckyWomen from "../../assets/images/lucky-women.png";
+import happyWomen from "../../assets/images/two-happy-women.png";
 
 const BannerCarousel = () => {
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
     return (
         <div>
             <Swiper
@@ -27,8 +37,40 @@ const BannerCarousel = () => {
                     clickable: true,
                 }}
                 navigation={true}
-                modules={[EffectFade, Autoplay, Pagination, Navigation]}
+                thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
+                modules={[
+                    FreeMode,
+                    EffectFade,
+                    Autoplay,
+                    Pagination,
+                    Navigation,
+                    Thumbs,
+                ]}
                 className="carousel"
+            >
+                <SwiperSlide>
+                    <img src={joyousCouple} alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src={excuseGirl} alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src={luckyWomen} alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src={happyWomen} alt="" />
+                </SwiperSlide>
+            </Swiper>
+
+            {/* thumbs */}
+            <Swiper
+                onSwiper={setThumbsSwiper}
+                spaceBetween={10}
+                slidesPerView={4}
+                freeMode={true}
+                watchSlidesProgress={true}
+                modules={[FreeMode, Navigation, Thumbs]}
+                className="carouselThumb mt-2"
             >
                 <SwiperSlide>
                     <img src={joyousCouple} alt="" />
