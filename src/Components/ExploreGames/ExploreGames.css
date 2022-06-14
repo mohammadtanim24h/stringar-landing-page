@@ -1,0 +1,15 @@
+.explore, .games {
+    background-size: cover;
+    height: 350px;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: overlay;
+}
+
+.explore {
+    background-image: url("../../assets/images/explore.png");
+}
+
+.games {
+    background-image: url("../../assets/images/excited-gamer.png");
+}
