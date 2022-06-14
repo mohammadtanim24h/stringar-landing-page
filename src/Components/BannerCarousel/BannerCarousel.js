@@ -1,16 +1,28 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import joyousCouple from '../../assets/images/joyous-young-couple.png';
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Pagination, Navigation } from "swiper";
+import "./BannerCarousel.css";
+import joyousCouple from "../../assets/images/joyous-young-couple.png";
 
 const BannerCarousel = () => {
     return (
         <div>
             <Swiper
                 spaceBetween={50}
-                slidesPerView={1}
-                onSlideChange={() => console.log("slide change")}
-                onSwiper={(swiper) => console.log(swiper)}
+                centeredSlides={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                navigation={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="carousel"
             >
                 <SwiperSlide>
                     <img src={joyousCouple} alt="" />
