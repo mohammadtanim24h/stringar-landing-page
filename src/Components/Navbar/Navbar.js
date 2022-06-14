@@ -95,8 +95,8 @@ const Navbar = () => {
                     <a>Mohammad Tanim</a>
                     <a>Points: 3509</a>
                 </div>
-                <div class="avatar">
-                    <div class="w-16 rounded-full">
+                <div className="avatar">
+                    <div className="w-16 rounded-full">
                         <img src="https://api.lorem.space/image/face?hash=92310" />
                     </div>
                 </div>
