@@ -29,6 +29,7 @@
 
 .carouselThumb .swiper-slide {
     opacity: 0.4;
+    cursor: pointer;
 }
 
 .carouselThumb .swiper-slide-thumb-active {
