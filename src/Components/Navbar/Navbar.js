@@ -64,24 +64,42 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <li>
-                        <a className="font-semibold hover:bg-primary hover:text-white mx-1">Home</a>
+                        <a className="font-semibold hover:bg-primary hover:text-white mx-1">
+                            Home
+                        </a>
                     </li>
                     <li>
-                        <a className="font-semibold hover:bg-primary hover:text-white mx-1">Games</a>
+                        <a className="font-semibold hover:bg-primary hover:text-white mx-1">
+                            Games
+                        </a>
                     </li>
                     <li>
-                        <a className="font-semibold hover:bg-primary hover:text-white mx-1">Explore</a>
+                        <a className="font-semibold hover:bg-primary hover:text-white mx-1">
+                            Explore
+                        </a>
                     </li>
                     <li>
-                        <a className="font-semibold hover:bg-primary hover:text-white mx-1">User Guide</a>
+                        <a className="font-semibold hover:bg-primary hover:text-white mx-1">
+                            User Guide
+                        </a>
                     </li>
                     <li>
-                        <a className="font-semibold hover:bg-primary hover:text-white mx-1">Contact Us</a>
+                        <a className="font-semibold hover:bg-primary hover:text-white mx-1">
+                            Contact Us
+                        </a>
                     </li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Get started</a>
+                <div className="flex flex-col text-center font-bold mr-5">
+                    <a>Mohammad Tanim</a>
+                    <a>Points: 3509</a>
+                </div>
+                <div class="avatar">
+                    <div class="w-16 rounded-full">
+                        <img src="https://api.lorem.space/image/face?hash=92310" />
+                    </div>
+                </div>
             </div>
         </div>
     );
