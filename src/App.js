@@ -1,9 +1,10 @@
 import "./App.css";
+import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
     return (
-        <div className="App">
-            <h2 className="text-red-500">Hellow World</h2>
+        <div className="max-w-7xl mx-auto">
+            <Navbar></Navbar>
         </div>
     );
 }
